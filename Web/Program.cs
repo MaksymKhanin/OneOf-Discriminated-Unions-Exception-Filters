@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 
-builder.Services.AddePayloadApplicationMediatR();
+builder.Services.AddPayloadApplicationMediatR();
 
 
 builder.Services.AddMvc(options =>

@@ -6,7 +6,7 @@ namespace Application.Configuration
 {
     public static class Dependencies
     {
-        public static IServiceCollection AddePayloadApplicationMediatR(this IServiceCollection services)
+        public static IServiceCollection AddPayloadApplicationMediatR(this IServiceCollection services)
             => services.AddMediatR(Assembly.GetExecutingAssembly());
     }
 }
