@@ -30,3 +30,6 @@ To add new exception:
 6) In Controller add parameter to match operator.
 
 Magic!
+
+
+Don`t forget about InternalsVisibleTo. Especially for tests.
