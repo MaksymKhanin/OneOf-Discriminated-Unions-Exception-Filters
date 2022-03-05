@@ -79,7 +79,7 @@ namespace Adapters
         [InlineAutoData]
         public async Task Test004(Guid ticketId)
         {
-            // Simulate not found
+            // Simulate Source Download Error
 
             ticketId = new Guid("00000000-0000-0000-0000-000000000001");
 
