@@ -14,7 +14,7 @@ namespace Application
     internal class PayloadSendHandler : IRequestHandler<
             PayloadSendCommand, OneOf<Success, PayloadSourceNotFoundError, PayloadSourceDownloadError>>
     {
-        public Task<OneOf<Success, PayloadSourceNotFoundError, PayloadSourceDownloadError>> Handle(PayloadSendCommand request, CancellationToken cancellationToken)
+        public async Task<OneOf<Success, PayloadSourceNotFoundError, PayloadSourceDownloadError>> Handle(PayloadSendCommand request, CancellationToken cancellationToken)
         {
             if (request.TicketId.ToString() == "00000000-0000-0000-0000-000000000000")
             {
@@ -25,7 +25,7 @@ namespace Application
                 throw new PayloadSourceDownloadException("Payload send error", request.TicketId.ToString());
             }
 
-            return Task.FromResult<OneOf<Success, PayloadSourceNotFoundError, PayloadSourceDownloadError>>(default);
+            return default;
         }
     }
 
