@@ -25,7 +25,7 @@ namespace Application
                 throw new PayloadSourceDownloadException("Payload send error", request.TicketId.ToString());
             }
 
-            return default;
+            return Task.FromResult<OneOf<Success, PayloadSourceNotFoundError, PayloadSourceDownloadError>>(default);
         }
     }
 
